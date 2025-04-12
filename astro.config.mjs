@@ -7,5 +7,7 @@ export default defineConfig({
     vite: {
       plugins: [tailwindcss()],
     },
+    site: 'https://matiasrma.github.io/nisega/',
+    base: 'nisega',
   });
   
