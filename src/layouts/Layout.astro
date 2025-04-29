@@ -1,6 +1,7 @@
 ---
-import Header from "../components/Header.astro";
-const { children } = Astro.props;
+import Footer from "../components/Footer.astro";
+import HeaderReact from '../components/HeaderReact.jsx';
+
 ---
 
 <!doctype html>
@@ -14,11 +15,9 @@ const { children } = Astro.props;
         <link rel="icon" type="image/png" href="/nisega/logo.png" />
 	</head>
 	<body class="bg-white text-gray-900">
-        <Header />
+        <HeaderReact client:load />
         <slot />
-        <!-- <main class="max-w-6xl mx-auto px-4">
-        {children}
-        </main> -->
+        <Footer />
     </body>
 </html>
 

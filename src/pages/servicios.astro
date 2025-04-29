@@ -1,0 +1,70 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+    
+    <section class="relative w-full h-[300px] md:h-[500px] overflow-hidden">
+        <img  src="/nisega/banner1.jpg" 
+            alt="Banner de NISEGA" 
+            class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-[#00000057] bg-opacity-40 flex items-center justify-center pointer-events-none flex-col gap-4">
+            <h1 class="text-white text-4xl md:text-6xl font-bold text-center pointer-events-auto">
+                Nuestros Servicios
+            </h1>
+        </div>
+    </section>
+
+
+	<main class="max-w-6xl mx-auto px-4 py-8">
+       
+        <section class="max-w-6xl mx-auto px-4 py-12 flex flex-col md:flex-row items-center gap-8">
+            <!-- Imagen a la izquierda -->
+            <div class="md:w-1/2">
+            <img src="/nisega/calibre.png" alt="Descripción de la imagen" class="w-full h-auto rounded-lg shadow-lg" />
+            </div>
+        
+            <!-- Texto a la derecha -->
+            <div class="md:w-1/2 text-center md:text-left">
+            <h2 class="text-3xl md:text-2xl font-bold mb-4">SERVICIO DE INGENIERIA</h2>
+            <p class="text-gray-700 text-lg mb-6">
+                En NISEGA brindamos soluciones especializada en la planificación, diseño y gestión de proyectos garantizando la eficiencia, 
+                seguridad e innovación en busca de la excelencia en el proyecto. 
+            </p>
+            </div>
+        </section>
+        <section class="max-w-6xl mx-auto px-4 py-12 flex flex-col md:flex-row-reverse items-center gap-8">
+            <!-- Imagen a la izquierda -->
+            <div class="md:w-1/2">
+            <img src="/nisega/epp.png" alt="Descripción de la imagen" class="w-full h-auto rounded-lg shadow-lg" />
+            </div>
+        
+            <!-- Texto a la derecha -->
+            <div class="md:w-1/2 text-center md:text-left">
+            <h2 class="text-3xl md:text-2xl font-bold mb-4">SERVICIO DE SEGURIDAD E HIGIENE</h2>
+            <p class="text-gray-700 text-lg mb-6">
+                Nos especializamos en la identificación y evaluación de riesgos, Implementación de medidas preventivas, asesoramiento en el cumplimiento normativo según ley de seguridad e higiene 19587/72, dictado de capacitación y formación, Asesoramiento en gestión, Supervisión y auditorias. 
+            </p>
+            </div>
+        </section>
+        <section class="max-w-6xl mx-auto px-4 py-12 flex flex-col md:flex-row items-center gap-8">
+            <!-- Imagen a la izquierda -->
+            <div class="md:w-1/2">
+            <img src="/nisega/lideres.png" alt="Descripción de la imagen" class="w-full h-auto rounded-lg shadow-lg" />
+            </div>
+        
+            <!-- Texto a la derecha -->
+            <div class="md:w-1/2 text-center md:text-left">
+            <h2 class="text-3xl md:text-2xl font-bold mb-4">FORMACION DE LIDERES, EXCELENCIA OPERACIONAL, MEJORA CONTINUA </h2>
+            <p class="text-gray-700 text-lg mb-6">
+                Nos enfocamos en la mejora continua generando estándares claros y definidos a fin de mejorar la eficiencia, desarrollando equipos solidos con estándares claros  para asi poder generar un crecimiento cultural en la organización.
+            </p>
+            </div>
+        </section>
+    </main>
+</Layout>
