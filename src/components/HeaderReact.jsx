@@ -25,11 +25,10 @@ export default function HeaderReact() {
             </button>
 
             {/* Menú principal */}
-                <nav className="hidden md:flex flex-wrap gap-4 text-sm md:text-base text-right">
-                    <a href="/nisega/formacion" class="text-gray-700 hover:text-blue-600 transition">Formación</a>
-                    <a href="/nisega/servicios" class="text-gray-700 hover:text-blue-600 transition">Servicios</a>
+                <nav className="hidden md:flex flex-wrap gap-4 text-sm md:text-base text-right px-4">
+                    <a href="/nisega/" class="text-gray-700 hover:text-blue-600 transition">Inicio</a>
                     <a href="/nisega/mediciones" class="text-gray-700 hover:text-blue-600 transition">Mediciones</a>
-                    <a href="/nisega/sobre" class="text-gray-700 hover:text-blue-600 transition">Sobre nosotros</a>
+                    <a href="/nisega/servicios" class="text-gray-700 hover:text-blue-600 transition">Servicios</a>
                     <a href="/nisega/contacto" class="text-gray-700 hover:text-blue-600 transition">Contacto</a>
                 </nav>
         </div>
@@ -37,10 +36,9 @@ export default function HeaderReact() {
         {/* Menú móvil */}
         {isOpen && (
         <div className="absolute top-full pt-3 left-0 w-full bg-white shadow-md px-4 pb-4 flex flex-col gap-2 text-sm z-40">
-            <a href="/nisega/formacion" className="text-gray-700 hover:text-blue-600 transition">Formación</a>
-            <a href="/nisega/servicios" className="text-gray-700 hover:text-blue-600 transition">Servicios</a>
+            <a href="/nisega/" className="text-gray-700 hover:text-blue-600 transition">Inicio</a>
             <a href="/nisega/mediciones" className="text-gray-700 hover:text-blue-600 transition">Mediciones</a>
-            <a href="/nisega/sobre" className="text-gray-700 hover:text-blue-600 transition">Sobre nosotros</a>
+            <a href="/nisega/servicios" className="text-gray-700 hover:text-blue-600 transition">Servicios</a>
             <a href="/nisega/contacto" className="text-gray-700 hover:text-blue-600 transition">Contacto</a>
         </div>
         )}

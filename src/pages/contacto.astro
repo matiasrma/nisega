@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+    <section class="relative w-full h-[300px] md:h-[500px]">
+        <img  src="/nisega/banner1.jpg" 
+            alt="Banner de NISEGA" 
+            class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-[#00000057] bg-opacity-40 flex items-center justify-center pointer-events-none flex-col gap-4">
+            <h1 class="text-white text-4xl md:text-6xl font-bold text-center pointer-events-auto">
+                Contacto
+            </h1>
+        </div>
+    </section>
+
+    <main class="max-w-4xl mx-[100px] px-4 py-10 max-sm:mx-0">
+        <form class="space-y-4 w-full">
+            <div>
+                <label class="block font-semibold">Nombre y Apellido</label>
+                <input type="text" class="w-full border border-gray-300 p-2 rounded" required />
+            </div>
+            <div>
+                <label class="block font-semibold">Email</label>
+                <input type="email" class="w-full border border-gray-300 p-2 rounded" required />
+            </div>
+            <div>
+                <label class="block font-semibold">Mensaje</label>
+                <textarea class="w-full border border-gray-300 p-2 rounded h-32" required></textarea>
+            </div>
+            <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">
+            Enviar
+            </button>
+        </form>
+    </main>
+    
+</Layout>
