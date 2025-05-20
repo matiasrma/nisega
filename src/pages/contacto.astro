@@ -1,14 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import MensajeEnvio from '../components/MensajeEnvio.jsx';
 ---
 
 <Layout>
-    <section class="relative w-full h-[300px] md:h-[500px]">
-        <img  src="/nisega/banner1.jpg" 
+    <section class="relative w-full h-[300px] md:h-[500px] slide-in-left">
+        <img  src="/banner1.jpg" 
             alt="Banner de NISEGA" 
             class="w-full h-full object-cover"
         />
@@ -18,25 +16,50 @@ import '../styles/global.css';
             </h1>
         </div>
     </section>
-
-    <main class="max-w-4xl mx-[100px] px-4 py-10 max-sm:mx-0">
-        <form class="space-y-4 w-full">
-            <div>
-                <label class="block font-semibold">Nombre y Apellido</label>
-                <input type="text" class="w-full border border-gray-300 p-2 rounded" required />
-            </div>
-            <div>
-                <label class="block font-semibold">Email</label>
-                <input type="email" class="w-full border border-gray-300 p-2 rounded" required />
-            </div>
-            <div>
-                <label class="block font-semibold">Mensaje</label>
-                <textarea class="w-full border border-gray-300 p-2 rounded h-32" required></textarea>
-            </div>
-            <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">
-            Enviar
-            </button>
-        </form>
-    </main>
+    <MensajeEnvio client:load />
+    <div id="loader" class="hidden flex justify-center mb-4">
+        <svg class="animate-spin h-12 w-12 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+        </svg>
+    </div>
     
 </Layout>
+
+<script>
+    window.addEventListener("DOMContentLoaded", () => {
+    const hash = window.location.hash;
+
+    if (hash === "#envio") {
+        const target = document.getElementById("envio");
+        if (target) {
+        // Pequeño delay para asegurar que todo esté cargado
+        setTimeout(() => {
+            target.style.display = "block"; // Mostrar si estaba oculto
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 1000);
+        }
+    }
+    });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contacto-form")!;
+    const loader = document.getElementById("loader")!;
+
+    form.addEventListener("submit", () => {
+      loader.classList.remove("hidden");
+    //   form.classList.add("hidden");
+     // Deshabilitar todos los elementos del formulario
+      const elements = form.querySelectorAll("input, textarea, button");
+      elements.forEach(el => {
+
+        if (el instanceof HTMLButtonElement) {
+           el.textContent = 'Enviando…';
+            el.disabled = true;
+        }
+      });
+    });
+  });
+</script>

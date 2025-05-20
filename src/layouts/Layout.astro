@@ -11,12 +11,27 @@ import HeaderReact from '../components/HeaderReact.jsx';
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>NISEGA</title>
-        <link rel="icon" type="image/png" href="/nisega/logo.png" />
+        <link rel="icon" type="image/png" href="/logo.png" />
 	</head>
 	<body class="bg-white text-gray-900 flex flex-col min-h-screen">
         <HeaderReact client:load />
         <slot />
         <Footer />
+        
+        <!-- WHATSAPP -->
+        <a
+            href="https://wa.me/2995110789"
+            class="whatsapp-float"
+            target="_blank"
+            rel="noopener noreferrer"
+            >
+            <img
+                src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg"
+                alt="WhatsApp"
+                width="35"
+                height="35"
+            />
+        </a>
     </body>
 </html>
 
@@ -27,6 +42,26 @@ import HeaderReact from '../components/HeaderReact.jsx';
 		width: 100%;
 		height: 100%;
 	}
+
+    .whatsapp-float {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+        background: #25d366;
+        border-radius: 50%;
+        padding: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        transition: transform 0.2s;
+    }
+
+    .whatsapp-float:hover {
+        transform: scale(1.1);
+    }
+
+    .whatsapp-float img {
+        filter: invert(1); /* Hace el ícono blanco */
+    }
 </style>
 <script is:inline>
   document.addEventListener("DOMContentLoaded", () => {

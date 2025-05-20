@@ -7,8 +7,8 @@ export default function HeaderReact() {
     <header className="sticky top-0 z-50 bg-white shadow-md">
         <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
             {/* Logo */}
-            <a href="/nisega" className="flex items-center space-x-2">
-            <img src="/nisega/logo.png" alt="Logo NSG" className="h-12 w-auto m-1" />
+            <a href="/" className="flex items-center space-x-2">
+            <img src="/logo.png" alt="Logo NSG" className="h-12 w-auto m-1" />
             <span className="font-bold text-4xl">NISEGA</span>
             </a>
 
@@ -26,20 +26,20 @@ export default function HeaderReact() {
 
             {/* Menú principal */}
                 <nav className="hidden md:flex flex-wrap gap-4 text-sm md:text-base text-right px-4">
-                    <a href="/nisega/" class="text-gray-700 hover:text-blue-600 transition">Inicio</a>
-                    <a href="/nisega/mediciones" class="text-gray-700 hover:text-blue-600 transition">Mediciones</a>
-                    <a href="/nisega/servicios" class="text-gray-700 hover:text-blue-600 transition">Servicios</a>
-                    <a href="/nisega/contacto" class="text-gray-700 hover:text-blue-600 transition">Contacto</a>
+                    <a href="/" class="text-gray-700 hover:text-blue-600 transition">Inicio</a>
+                    <a href="/mediciones" class="text-gray-700 hover:text-blue-600 transition">Mediciones</a>
+                    <a href="/servicios" class="text-gray-700 hover:text-blue-600 transition">Servicios</a>
+                    <a href="/contacto" class="text-gray-700 hover:text-blue-600 transition">Contacto</a>
                 </nav>
         </div>
 
         {/* Menú móvil */}
         {isOpen && (
         <div className="absolute top-full pt-3 left-0 w-full bg-white shadow-md px-4 pb-4 flex flex-col gap-2 text-sm z-40">
-            <a href="/nisega/" className="text-gray-700 hover:text-blue-600 transition">Inicio</a>
-            <a href="/nisega/mediciones" className="text-gray-700 hover:text-blue-600 transition">Mediciones</a>
-            <a href="/nisega/servicios" className="text-gray-700 hover:text-blue-600 transition">Servicios</a>
-            <a href="/nisega/contacto" className="text-gray-700 hover:text-blue-600 transition">Contacto</a>
+            <a href="/" className="text-gray-700 hover:text-blue-600 transition">Inicio</a>
+            <a href="/mediciones" className="text-gray-700 hover:text-blue-600 transition">Mediciones</a>
+            <a href="/servicios" className="text-gray-700 hover:text-blue-600 transition">Servicios</a>
+            <a href="/contacto" className="text-gray-700 hover:text-blue-600 transition">Contacto</a>
         </div>
         )}
     </header>
